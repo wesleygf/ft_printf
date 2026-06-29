@@ -6,7 +6,7 @@
 #    By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/29 11:39:24 by wgolbert          #+#    #+#              #
-#    Updated: 2026/06/29 12:11:24 by wgolbert         ###   ########.fr        #
+#    Updated: 2026/06/29 18:53:15 by wgolbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,10 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 
 SRC = ft_puthexa \
+	ft_putptr \
+	ft_putnbr \
+	ft_putstr \
+	ft_printf
 
 SRCS = $(addsuffix .c, $(SRC))
 OBJS = $(addsuffix .o, $(SRC))

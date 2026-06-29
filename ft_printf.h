@@ -6,7 +6,7 @@
 /*   By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 12:57:02 by wgolbert          #+#    #+#             */
-/*   Updated: 2026/06/29 15:49:34 by wgolbert         ###   ########.fr       */
+/*   Updated: 2026/06/29 18:51:34 by wgolbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@
 int	ft_putnbr(int n);
 int	ft_puthexa(unsigned long n, int upper);
 int	ft_putstr(char *str);
+int	ft_putptr(void *ptr);
 
 #endif
