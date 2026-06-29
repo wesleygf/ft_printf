@@ -6,13 +6,13 @@
 /*   By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 13:17:28 by wgolbert          #+#    #+#             */
-/*   Updated: 2026/06/29 14:01:00 by wgolbert         ###   ########.fr       */
+/*   Updated: 2026/06/29 19:09:39 by wgolbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	count_digit(int n)
+static int	ft_count_digit(int n)
 {
 	int	count;
 

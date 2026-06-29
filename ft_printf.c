@@ -6,13 +6,13 @@
 /*   By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 13:02:24 by wgolbert          #+#    #+#             */
-/*   Updated: 2026/06/29 18:53:08 by wgolbert         ###   ########.fr       */
+/*   Updated: 2026/06/29 19:11:58 by wgolbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	convert(char c, void *src)
+static int	ft_convert(char c, va_list args)
 {
 	if (c == 'c' || c == 's')
 		return (ft_putstr(""));
@@ -31,7 +31,10 @@ int	ft_printf(const char *s, ...)
 	while (s[i])
 	{
 		if (s[i] == '%')
-			convert(s[i + 1]);
+		{
+			count = ft_convert(s[i + 1]);
+			
+		}
 		
 		i++;
 	}

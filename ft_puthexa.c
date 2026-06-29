@@ -6,13 +6,13 @@
 /*   By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 15:10:50 by wgolbert          #+#    #+#             */
-/*   Updated: 2026/06/29 15:41:14 by wgolbert         ###   ########.fr       */
+/*   Updated: 2026/06/29 19:09:23 by wgolbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_printf.h>
 
-static char	itoh(int n)
+static char	ft_itoh(int n)
 {
 	if (n == 10)
 		return ('a');
@@ -49,7 +49,7 @@ static char	*ft_converthexa(unsigned long n)
 	while (i > 0)
 	{
 		i--;
-		converted[i] = itoh (i % 16);
+		converted[i] = ft_itoh (i % 16);
 		temp = temp / 16;
 	}
 	return (converted);
