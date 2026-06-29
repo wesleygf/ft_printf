@@ -6,7 +6,7 @@
 /*   By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 15:10:50 by wgolbert          #+#    #+#             */
-/*   Updated: 2026/06/29 13:03:31 by wgolbert         ###   ########.fr       */
+/*   Updated: 2026/06/29 13:25:17 by wgolbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,23 @@ static char	*ft_converthexa(int n)
 {
 	char	*converted;
 	int		i;
-	int		t;
+	int		temp;
 
 	i = 0;
-	t = n;
-	while (t > 0)
+	temp = n;
+	while (temp > 0)
 	{
-		t = t / 16;
+		temp = temp / 16;
 		i++;
 	}
 	converted = malloc(sizeof(char) * (i + 1));
 	converted[i] = '\0';
-	t = n;
+	temp = n;
 	while (i > 0)
 	{
 		i--;
 		converted[i] = itoh (i % 16);
-		t = t / 16;
+		temp = temp / 16;
 	}
 	return (converted);
 }
