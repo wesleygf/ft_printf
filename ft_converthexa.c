@@ -6,7 +6,7 @@
 /*   By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 13:55:59 by wgolbert          #+#    #+#             */
-/*   Updated: 2026/06/28 15:07:45 by wgolbert         ###   ########.fr       */
+/*   Updated: 2026/06/29 14:50:20 by wgolbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_converthexa(int n)
 	{
 		t = 
 		i = i % 16;
-		
 	}
 	return (converted);
 }

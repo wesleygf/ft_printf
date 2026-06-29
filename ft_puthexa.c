@@ -6,7 +6,7 @@
 /*   By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 15:10:50 by wgolbert          #+#    #+#             */
-/*   Updated: 2026/06/29 13:25:17 by wgolbert         ###   ########.fr       */
+/*   Updated: 2026/06/29 15:41:14 by wgolbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ static char	itoh(int n)
 		return (n + '0');
 }
 
-static char	*ft_converthexa(int n)
+static char	*ft_converthexa(unsigned long n)
 {
-	char	*converted;
-	int		i;
-	int		temp;
+	char				*converted;
+	int					i;
+	unsigned long		temp;
 
 	i = 0;
 	temp = n;
@@ -68,10 +68,9 @@ static char	*ft_toupper(char *str)
 	return (str);
 }
 
-int	ft_puthexa(int n, int upper)
+int	ft_puthexa(unsigned long n, int upper)
 {
 	char	*str;
-	int		i;
 
 	str = ft_converthexa(n);
 	if (upper)
