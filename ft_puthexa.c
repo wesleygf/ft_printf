@@ -6,7 +6,7 @@
 /*   By: wgolbert <wgolbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 15:10:50 by wgolbert          #+#    #+#             */
-/*   Updated: 2026/06/28 15:49:52 by wgolbert         ###   ########.fr       */
+/*   Updated: 2026/06/29 13:03:31 by wgolbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,47 @@ static char	*ft_converthexa(int n)
 	int		i;
 	int		t;
 
-	i = n;
-	t = 0;
-	converted = malloc(7050);
+	i = 0;
+	t = n;
+	while (t > 0)
+	{
+		t = t / 16;
+		i++;
+	}
+	converted = malloc(sizeof(char) * (i + 1));
+	converted[i] = '\0';
+	t = n;
 	while (i > 0)
 	{
-		*converted = itoh (i % 16);
-		i = i / 16;
+		i--;
+		converted[i] = itoh (i % 16);
+		t = t / 16;
 	}
 	return (converted);
 }
-int ft_puthexa()
+
+static char	*ft_toupper(char *str)
 {
-	
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = (str[i] - 32);
+	}
+	return (str);
+}
+
+int	ft_puthexa(int n, int upper)
+{
+	char	*str;
+	int		i;
+
+	str = ft_converthexa(n);
+	if (upper)
+	{
+		str = ft_toupper(str);
+	}
+	return (ft_putstr(str));
 }
