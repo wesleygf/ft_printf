@@ -12,11 +12,6 @@
 
 #include "ft_printf.h"
 
-static void	ft_putchar_fd(char c)
-{
-	write (1, &c, sizeof(char));
-}
-
 int	ft_putstr(char *str)
 {
 	int	count;
