@@ -36,7 +36,7 @@ static char	*ft_itoa(int n)
 	int		temp;
 	char	*str;
 
-	count = count_digit(n);
+	count = ft_count_digit(n);
 	str = malloc(sizeof(char) * (count + 1));
 	if (!str)
 		return (NULL);
@@ -55,15 +55,12 @@ static char	*ft_itoa(int n)
 
 int	ft_putnbr(int n)
 {
-	int		count;
 	char	*str;
 
-	count = 0;
 	if (n == -2147483648)
 		return (ft_putstr("-2147483648"));
 	if (n == 0)
 		return (ft_putstr("0"));
 	str = ft_itoa(n);
-	count = ft_putstr (str);
-	return (count);
+	return (ft_putstr (str));
 }
