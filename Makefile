@@ -23,6 +23,7 @@ SRC = ft_puthexa \
 	ft_putnbr \
 	ft_putstr \
 	ft_printf \
+	ft_putchar
 
 SRCS = $(addsuffix .c, $(SRC))
 OBJS = $(addsuffix .o, $(SRC))

@@ -15,10 +15,7 @@
 static int	ft_convert(char c, va_list args)
 {
 	if (c == 'c')
-	{
-		ft_putchar(va_arg(args, char));
-		return (1);		
-	}
+		return (ft_putchar(va_arg(args, char)));
 	if (c == 's')
 		return (ft_putstr(""));
 	if (c == 'p')
@@ -44,6 +41,8 @@ int	ft_printf(const char *s, ...)
 	int		count;
 	va_list	args;
 
+	if (!s)
+		return (-1);
 	i = 0;
 	count = 0;
 	va_start(args, s);

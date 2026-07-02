@@ -21,6 +21,7 @@ int     ft_putnbr(int n);
 int     ft_puthexa(unsigned long n, int upper);
 int     ft_putstr(char *str);
 int     ft_putptr(void *ptr);
-void    ft_putchar(char c);
+int     ft_putchar(char c);
+int     ft_printf(const char *s, ...);
 
 #endif

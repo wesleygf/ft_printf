@@ -14,14 +14,12 @@
 
 int	ft_putstr(char *str)
 {
-	int	count;
+	int	len;
 
-	count = 0;
-	while (str[count])
-	{
-		ft_putchar_fd(str[count]);
-		count++;
-	}
-	free(str);
-	return (count);
+	len = 0;
+	if (!str)
+		return (write(1, "(null)", 6));
+	while (str[len])
+		len++;
+	return (write(1, str, len));
 }
